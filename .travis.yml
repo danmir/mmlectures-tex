@@ -16,8 +16,8 @@ install:
    - sudo apt-get install latexmk -y
    - sudo apt-get install tex4ht -y
    - sudo apt-get install texlive-lang-cyrillic
-   - tlmgr update --self  
-   - tlmgr install babel-russian 
+   #- tlmgr update --self  
+   #- tlmgr install babel-russian 
    - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
    - sudo texlua install-getnonfreefonts
    - sudo getnonfreefonts-sys garamond
