@@ -7,7 +7,7 @@ before_install:
 
 install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
-  - sudo apt-get install texlive-lang-cyrillic
+  - sudo apt-get install texlive-lang-russian
 
 deploy:
   provider: releases
