@@ -7,7 +7,8 @@ before_install:
 
 install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
-  - sudo apt-get install texlive-lang-russian
+  # - sudo apt-get install texlive-lang-russian
+  - tlmgr install babel-portuges  
 
 deploy:
   provider: releases
