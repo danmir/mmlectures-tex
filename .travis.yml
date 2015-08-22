@@ -8,6 +8,7 @@ before_install:
 install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
   - sudo apt-get update
+  - dpkg -S t2aenc.def
   - sudo apt-get install texlive-lang-cyrillic texlive-fonts-extra texlive-generic-recommended biblatex
   - sudo apt-get install texlive-latex-recommended texlive-doc-ru texlive-latex-base
   - sudo apt-get install texlive-full
