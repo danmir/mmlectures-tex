@@ -9,6 +9,7 @@ install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
   - sudo apt-get install texlive-lang-cyrillic
   - sudo apt-get install texlive-latex-recommended
+  - sudo apt-get install texlive-collection-langcyrillic
   - tlmgr update --self  
   - tlmgr install babel-russian  
 
