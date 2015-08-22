@@ -1,6 +1,5 @@
 language: ruby
-script: >
-  echo '\documentclass{article}\begin{document}Hello, world!\end{document}' | pdflatex
+script:
   - pdflatex -output-directory _build 'Lecture template/Lecture_template.tex'
 before_install:
   - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
