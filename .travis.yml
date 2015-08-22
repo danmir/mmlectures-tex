@@ -8,6 +8,7 @@ before_install:
 install:
   - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
   # - sudo apt-get install texlive-lang-russian
+  - sudo apt-get install texlive-latex-recommended
   - tlmgr update --self  
   - tlmgr install babel-russian  
 
