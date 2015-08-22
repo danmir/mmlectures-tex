@@ -4,7 +4,7 @@ script:
 
 before_install:
 #  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
-   - curl -L http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty   
+   - wget http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty   
 
 install:
    - sudo add-apt-repository ppa:texlive-backports/ppa -y
