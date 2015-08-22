@@ -2,18 +2,22 @@ language: ruby
 script:
   - pdflatex 'Lecture template/Lecture_template.tex'
 
-before_install:
-  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
+#before_install:
+#  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
 
 install:
-  - PATH=$HOME/texlive/bin/x86_64-linux:$PATH
-  - sudo apt-get update
-  - dpkg -S t2aenc.def
-  - sudo apt-get install texlive-lang-cyrillic texlive-fonts-extra texlive-generic-recommended biblatex
-  - sudo apt-get install texlive-latex-recommended texlive-doc-ru texlive-latex-base
-  - sudo apt-get install texlive-full
-  - tlmgr update --self  
-  - tlmgr install babel-russian  
+   - sudo add-apt-repository ppa:texlive-backports/ppa -y
+   - sudo apt-get update -y
+   - sudo apt-get install texlive-latex-extra -y 
+   - sudo apt-get install texlive-luatex -y
+   - sudo apt-get install texlive-fonts-extra -y
+   - sudo apt-get install cm-super -y
+   - sudo apt-get install texlive-bibtex-extra -y
+   - sudo apt-get install latexmk -y
+   - sudo apt-get install tex4ht -y
+   - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
+   - sudo texlua install-getnonfreefonts
+   - sudo getnonfreefonts-sys garamond
 
 deploy:
   provider: releases
