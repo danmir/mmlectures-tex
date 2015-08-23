@@ -1,7 +1,7 @@
 language: ruby
 script:
   - pdflatex 'Lecture template/Lecture_template.tex'
-  - pdflatex 'Lecture1/Lecture_1.tex'
+  - pdflatex 'Lecture_1.tex'
 before_install:
 #  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
    - wget http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty   
@@ -22,7 +22,7 @@ install:
    - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
    - sudo texlua install-getnonfreefonts
    - sudo getnonfreefonts-sys garamond
-   - ls -lah
+   - cd 'Lecture1'
 
 deploy:
   provider: releases
