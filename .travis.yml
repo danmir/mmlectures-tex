@@ -23,6 +23,7 @@ install:
    - sudo texlua install-getnonfreefonts
    - sudo getnonfreefonts-sys garamond
    - cd 'Lecture1'
+   - wget http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty
 
 deploy:
   provider: releases
