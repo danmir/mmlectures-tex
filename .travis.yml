@@ -22,6 +22,7 @@ install:
    - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
    - sudo texlua install-getnonfreefonts
    - sudo getnonfreefonts-sys garamond
+   - ls -lah
 
 deploy:
   provider: releases
