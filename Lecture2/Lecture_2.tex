@@ -227,10 +227,10 @@ $\dd{x}{t}=a(t)x^2+b(t)x+f(t)$ \\\\
 Замена $x=y+\overline{x}(t)$ и подставим в исходное
 \begin{multline*}
     \dd{y}{t}+\underline{\dd{\overline{x}}{t}}=a(t)[y^2+2y\overline{x}+x^2]+b(t)[y+\overline{x}]+f(t)=\underline{a(t)\overline{x}^2}+\underline{b(t)\overline{x}}+\underline{f(t)}+a(t)y^2+2a(t)\overline{x}(t)y+b(t)y \\
-	\mbox{Подчеркнуто, так как $\overline{x}$ - является частным решением и имеем тождество}
+    \mbox{Подчеркнуто, так как $\overline{x}$ - является частным решением и имеем тождество}
 \end{multline*}
 \begin{gather*}
-	\dd{y}{t}=a(t)y^2+[2a(t)\overline{x}(t)+b(t)]y \mbox{ Уравнение Бернули, где $\alpha=2$ по $y$}
+    \dd{y}{t}=a(t)y^2+[2a(t)\overline{x}(t)+b(t)]y \mbox{ Уравнение Бернули, где $\alpha=2$ по $y$}
 \end{gather*}
 
 \section{Уравнения в полных дифференциалах}
@@ -239,38 +239,38 @@ $\dd{x}{t}=a(t)x^2+b(t)x+f(t)$ \\\\
   \mbox{ \# что перем, что функ - можем выбирать}
 \end{equation}
 \begin{mdef}
-	Уравнение (1) называется уравнением в полных дифференциалах, если $\exists U(t,x)$ что $M(t,x)dt+N(t,x)dx=dU$ \\\\
-	(2) $dU(t,x)=\pd{U}{t}dt+\pd{U}{x}dx\Rightarrow\exists U(t,x)$ что $\pd{U}{t}=M(t,x) \mbox{ and } \pd{U}{x}=N(t,x)$ (3)
+    Уравнение (1) называется уравнением в полных дифференциалах, если $\exists U(t,x)$ что $M(t,x)dt+N(t,x)dx=dU$ \\\\
+    (2) $dU(t,x)=\pd{U}{t}dt+\pd{U}{x}dx\Rightarrow\exists U(t,x)$ что $\pd{U}{t}=M(t,x) \mbox{ and } \pd{U}{x}=N(t,x)$ (3)
 \end{mdef}
 
 \begin{thm-hand}[1]
-	Пусть (1) - уравнение в ПД \\
-	$x(t)$ - решение (1) $\Longleftrightarrow U(t,x(t))\equiv const$
+    Пусть (1) - уравнение в ПД \\
+    $x(t)$ - решение (1) $\Longleftrightarrow U(t,x(t))\equiv const$
 \end{thm-hand}
 \begin{proof}
-	\begin{multline*}
-		\dfrac{d}{dt}[U(t,x(t))]=\pd{U}{t}(t,x(t)+\pd{U}{x}(t,x(t))\dd{x}{t}=^{(3)}M(t,x(t))+N(t,x(t))\dd{x}{t}\\=\dfrac{M(t,x(t))dt+N(t,x(t))dx}{dt}
-	\end{multline*}
-	\boxed{$\Longrightarrow$} 
-	$x(t)$ - решение (1) $\Longrightarrow$ числитель $\equiv 0$ $\Longrightarrow$ $\dfrac{d}{dt}[U(t,x(t))]\equiv0$ $\Longrightarrow$ $U(t,x(t))\equiv const$ Если производная ноль, то функция - $const$ \\
-	\boxed{$\Longleftarrow$}
-	$U(t,x(t))\equiv const$ $\Longrightarrow$ числитель $\equiv 0$ $\Longrightarrow$ $x(t)$ - решение (1)
+    \begin{multline*}
+        \dfrac{d}{dt}[U(t,x(t))]=\pd{U}{t}(t,x(t)+\pd{U}{x}(t,x(t))\dd{x}{t}=^{(3)}M(t,x(t))+N(t,x(t))\dd{x}{t}\\=\dfrac{M(t,x(t))dt+N(t,x(t))dx}{dt}
+    \end{multline*}
+    \boxed{\Longrightarrow} 
+    $x(t)$ - решение (1) $\Longrightarrow$ числитель $\equiv 0$ $\Longrightarrow$ $\dfrac{d}{dt}[U(t,x(t))]\equiv0$ $\Longrightarrow$ $U(t,x(t))\equiv const$ Если производная ноль, то функция - $const$ \\
+    \boxed{\Longleftarrow}
+    $U(t,x(t))\equiv const$ $\Longrightarrow$ числитель $\equiv 0$ $\Longrightarrow$ $x(t)$ - решение (1)
 \end{proof}
 Если мы такую $U$ найдем, то общее решение (1) $U(t,x)=C$ \\
 Как нам найти функцию $U(t,x)$ ? и Как проверить, что уравнение (1) является уравнением в полных дифференциалах ? \\
 \begin{thm-hand}[2]
-	(1) - уравнение в ПД $\Longleftrightarrow$ $\pd{M(t,x)}{x}\equiv \pd{N(t,x)}{t}$ (4)
+    (1) - уравнение в ПД $\Longleftrightarrow$ $\pd{M(t,x)}{x}\equiv \pd{N(t,x)}{t}$ (4)
 \end{thm-hand}
 \begin{proof}
-	(1) - уравнение в ПД $\Longrightarrow \exists U(t,x)$ удовлетворяющая (3) $\Longrightarrow$ \\
-	$ \left.
+    (1) - уравнение в ПД $\Longrightarrow \exists U(t,x)$ удовлетворяющая (3) $\Longrightarrow$ \\
+    $ \left.
     \begin{aligned}
     \pd{M}{x}=\dfrac{\partial^2U}{\partial x \partial t}\\
     \pd{N}{t}=\dfrac{\partial^2U}{\partial t \partial x}\\
     \end{aligned}
     \right\} $
     имеем просто разный порядок дифференцирования $\Longrightarrow$ они тождественно равны $\Longrightarrow$ выполняется тождество (4) \\
-    \boxed{$\Longleftarrow$}
+    \boxed{\Longleftarrow}
     Пусть выполняется (4) \\\\
     $\pd{U}{t}=M(t,x)\Longrightarrow U(t,x)=\int\limits^{t}_{t_0}M(\tau ,x)d\tau+\underline{\underline{C(x)}}$ \\
     Подставим во 2-е: $\pd{U}{x}=\int\limits^{t}_{t_0}\pd{M}{x}(\tau,x)d\tau+\dd{C}{x}=N(t,x)$ из (4) видим, что $\pd{M}{x}(\tau,x)\equiv\pd{N}{t}(\tau,x)$ \\
@@ -279,23 +279,23 @@ $\dd{x}{t}=a(t)x^2+b(t)x+f(t)$ \\\\
     Теперь можно подставить эту функцию в ДУ и убедиться, что $\equiv const$
 \end{proof}
 \begin{mex}
-	$\underbrace{(t+x)}_Mdt+\underbrace{(t-x)}_Ndx=0$
-	\begin{equation*}
-    \begin{align*}
+    $\underbrace{(t+x)}_Mdt+\underbrace{(t-x)}_Ndx=0$
+    \begin{equation*}
+    \begin{aligned}
         \pd{M}{x}=(t+x)'_x=1\\
         \pd{N}{x}=(t-x)'_t=1\\
-    \end{align*}
+    \end{aligned}
     \qquad\qquad
     \left\{
-    \begin{align*}
+    \begin{aligned}
         \pd{U}{t}=t+x\\
         \pd{U}{x}=t-x\\
-    \end{align*}
+    \end{aligned}
     \right.
     \end{equation*}
-	U(t,x)=\dfrac{t^2}{2}+tx+C(x)
-	\pd{U}{x}=\underline{t}+\dd{C}{x}=\underline{t}-x\Longrightarrow C(x)=-\dfrac{x^2}{2}\Longrightarrow U(t,x)=\dfrac{t^2}{2}+tx-\dfrac{x^2}{2} \\\\
-	\mbox{Ответ: } \dfrac{t^2}{2}+tx-\dfrac{x^2}{2}=C
+    $U(t,x)=\dfrac{t^2}{2}+tx+C(x)$
+    $\pd{U}{x}=\underline{t}+\dd{C}{x}=\underline{t}-x\Longrightarrow C(x)=-\dfrac{x^2}{2}\Longrightarrow U(t,x)=\dfrac{t^2}{2}+tx-\dfrac{x^2}{2}$ \\\\
+    \mbox{Ответ: } $\dfrac{t^2}{2}+tx-\dfrac{x^2}{2}=C$
 \end{mex}
 
 
