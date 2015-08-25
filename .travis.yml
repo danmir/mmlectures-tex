@@ -1,6 +1,6 @@
 language: ruby
 script:
-  - pdflatex 'Lecture template/Lecture_template.tex'
+  - pdflatex 'Lecture_3.tex'
 
 before_install:
 #  - curl -L https://raw.githubusercontent.com/krlmlr/texlive-squashfs/master/out/texlive.tar.xz | tar xJC ~
@@ -19,15 +19,17 @@ install:
    - sudo apt-get install texlive-lang-cyrillic texlive-science
    #- tlmgr update --self  
    #- tlmgr install babel-russian 
-   - wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
-   - sudo texlua install-getnonfreefonts
-   - sudo getnonfreefonts-sys garamond
+   #- wget http://tug.org/fonts/getnonfreefonts/install-getnonfreefonts
+   #- sudo texlua install-getnonfreefonts
+   #- sudo getnonfreefonts-sys garamond
+   - cd Lecture3
+   - wget http://mirrors.ctan.org/macros/latex/contrib/IEEEtran/tools/IEEEtrantools.sty
 
 deploy:
   provider: releases
   api_key:
     secure: PUsZui5wZmhbX2KutX24WtfercUMulwTU1DVMei0BhtsY5UNFSQlbJo9G8K3pby+JO3W7nzFbo5DYt/D+8a8JhHGeD2mXJCEOD8aMe9m3nkkFMudJtTQkyi0qmLhcz+vC9fgNr2V/YiKZJ1LwbjbzFb18lny1KKvrDg98Es9ZPNE7SV/A/z9wobFpoUgG8mC+Ex/t7FMH1CFilYSnCcFx7oIptv+UINk2gcUf0XHb+Huf2KOS/qbbZufExqRxCEunqfmBz+CQi+RLvwjcQi0oTfMdU4gFIAJlipdqfhAmO6Y8QOOn5RKmFcWtWjkAwqEBFQrrr1k3EW4w5V6pyT11gtGXXBp+tvlY2oe3X+Vyzy46vY9PT2knqqoKhbgEw55NOJHYz+6ysRphFSapp2ACIp/8FDsuBi4p3obnjAW7cu/CwZA1peNvTgRpoqo+VnBeR14ztBJZufvyJIbNkqFWOYnqMsF1jjPH/RgiMEEpSlh9n+Q9u6u1Q3MQO+hKz2FcZFHRz3uqghXp90Rnpjusx/rAeo3ILuDPc+Tluz9Sina5AmnImxM92Lhm7MhpKlIcZyIxXihnUTa8iOchX6W6Q6NjfPXjSTmPTWfOKrlTFxhTptBY6VHfGZrgUfyB/mFJU+k7NPyjLWPZIb6JKGMmuHx1gqajQbw0OJTcz2qsl8=
-  file: Lecture_template.pdf
+  file: Lecture_3.pdf
   skip_cleanup: true
   on:
     tags: true
